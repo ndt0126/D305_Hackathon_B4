@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1531909320521027636",
+    "guild_id": "1530038187022352464",
+    "channel_id": "1530038187022352467",
+    "message_id": "1531909320521027636",
+    "author": "Minh",
+    "author_discord_id": "982314567890123456",
+    "content": "Em commit bản mới nhất rồi nha, tóm tắt khảo sát đã đăng trong tài liệu chung.",
+    "attached_file_urls": [],
+    "timestamp": "2026-07-26T02:12:53.754Z"
+  },
+  {
+    "id": "1531909320521027637",
+    "guild_id": "1530038187022352464",
+    "channel_id": "1530038187022352467",
+    "message_id": "1531909320521027637",
+    "author": "Minh",
+    "author_discord_id": "982314567890123456",
+    "content": "Mai em làm tiếp phần eval với golden set nhé.",
+    "attached_file_urls": [],
+    "timestamp": "2026-07-26T02:20:10.000Z"
+  },
+  {
+    "id": "1531909320521027638",
+    "guild_id": "1530038187022352464",
+    "channel_id": "1530038187022352467",
+    "message_id": "1531909320521027638",
+    "author": "Trung",
+    "author_discord_id": "840393744107831359",
+    "content": "Anh đang bị lỗi timeout khi gọi API export, chưa fix được.",
+    "attached_file_urls": [],
+    "timestamp": "2026-07-26T04:00:00.000Z"
+  },
+  {
+    "id": "1531909320521027639",
+    "guild_id": "1530038187022352464",
+    "channel_id": "1530038187022352467",
+    "message_id": "1531909320521027639",
+    "author": "Trung",
+    "author_discord_id": "840393744107831359",
+    "content": "Ai rảnh xem hộ anh với, deadline spec 23:59 hôm nay.",
+    "attached_file_urls": [],
+    "timestamp": "2026-07-26T04:01:00.000Z"
+  },
+  {
+    "id": "1531909320521027640",
+    "guild_id": "1530038187022352464",
+    "channel_id": "1530038187022352467",
+    "message_id": "1531909320521027640",
+    "author": "An",
+    "author_discord_id": "710120883556974612",
+    "content": "Trưa nay ăn gì mọi người?",
+    "attached_file_urls": [],
+    "timestamp": "2026-07-26T05:30:00.000Z"
+  }
+]

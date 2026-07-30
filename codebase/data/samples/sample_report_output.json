@@ -1,0 +1,61 @@
+{
+  "dailies": [
+    {
+      "target_discord_id": "982314567890123456",
+      "yesterday": "Em commit bản mới nhất và tóm tắt khảo sát đã đăng.",
+      "today": "Mai em làm tiếp phần eval với golden set."
+    },
+    {
+      "target_discord_id": "840393744107831359",
+      "yesterday": "Anh đang bị lỗi timeout khi gọi API export.",
+      "today": "Ai rảnh xem hộ anh với, deadline spec 23:59 hôm nay."
+    },
+    {
+      "target_discord_id": "710120883556974612",
+      "yesterday": "Không có thông tin.",
+      "today": "Không có thông tin."
+    }
+  ],
+  "weekly": {
+    "done": "- Đã commit bản mới nhất và tóm tắt khảo sát.",
+    "doing": "- Đang làm phần eval với golden set.",
+    "blocked": "- Bị lỗi timeout khi gọi API export.\n- Cần người hỗ trợ fix lỗi trước deadline.",
+    "questions": "Không có vấn đề được thảo luận."
+  },
+  "meta": {
+    "report_id": "rpt_2026-07-26",
+    "generated_at": "2026-07-30T10:17:08.181423Z",
+    "date": "2026-07-26",
+    "stats": {
+      "message_count": 5,
+      "member_count": 3,
+      "dropped_evidence_ids": 0
+    },
+    "sources": {
+      "dailies": {
+        "982314567890123456": [
+          "1531909320521027636",
+          "1531909320521027637"
+        ],
+        "840393744107831359": [
+          "1531909320521027638",
+          "1531909320521027639"
+        ],
+        "710120883556974612": []
+      },
+      "weekly": {
+        "done": [
+          "1531909320521027636"
+        ],
+        "doing": [
+          "1531909320521027637"
+        ],
+        "blocked": [
+          "1531909320521027638",
+          "1531909320521027639"
+        ],
+        "questions": []
+      }
+    }
+  }
+}

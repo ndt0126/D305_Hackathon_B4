@@ -1,0 +1,95 @@
+{
+  "guild_id": "111111111111111111",
+  "date": "2026-07-29",
+  "channels": ["general", "dev", "design", "random"],
+  "messages": [
+    {
+      "message_id": "m001",
+      "channel_id": "222222222222222201",
+      "channel_name": "general",
+      "author": "U01",
+      "timestamp": "2026-07-29T09:02:00+07:00",
+      "content": "Morning team, plan for today: finish the login API and review PR #12."
+    },
+    {
+      "message_id": "m002",
+      "channel_id": "222222222222222201",
+      "channel_name": "general",
+      "author": "U02",
+      "timestamp": "2026-07-29T09:05:00+07:00",
+      "content": "I'll take the PR review after lunch."
+    },
+    {
+      "message_id": "m003",
+      "channel_id": "222222222222222201",
+      "channel_name": "general",
+      "author": "U03",
+      "timestamp": "2026-07-29T09:10:00+07:00",
+      "content": "Anyone up for lunch at the new place next door?"
+    },
+    {
+      "message_id": "m004",
+      "channel_id": "222222222222222201",
+      "channel_name": "general",
+      "author": "U02",
+      "timestamp": "2026-07-29T15:40:00+07:00",
+      "content": "PR #12 reviewed and merged. Login API is done."
+    },
+    {
+      "message_id": "m005",
+      "channel_id": "222222222222222202",
+      "channel_name": "dev",
+      "author": "U03",
+      "timestamp": "2026-07-29T10:15:00+07:00",
+      "content": "The staging database keeps timing out when I run migrations."
+    },
+    {
+      "message_id": "m006",
+      "channel_id": "222222222222222202",
+      "channel_name": "dev",
+      "author": "U01",
+      "timestamp": "2026-07-29T10:20:00+07:00",
+      "content": "Which migration file? Can you paste the error?"
+    },
+    {
+      "message_id": "m007",
+      "channel_id": "222222222222222202",
+      "channel_name": "dev",
+      "author": "U03",
+      "timestamp": "2026-07-29T10:25:00+07:00",
+      "content": "0007_add_user_index. Error: connection reset by peer."
+    },
+    {
+      "message_id": "m008",
+      "channel_id": "222222222222222202",
+      "channel_name": "dev",
+      "author": "U01",
+      "timestamp": "2026-07-29T17:30:00+07:00",
+      "content": "Still no idea what causes it, I'll dig into it tomorrow morning."
+    },
+    {
+      "message_id": "m009",
+      "channel_id": "222222222222222203",
+      "channel_name": "design",
+      "author": "U04",
+      "timestamp": "2026-07-29T11:00:00+07:00",
+      "content": "Logo v3 uploaded to the shared drive, feedback please."
+    },
+    {
+      "message_id": "m010",
+      "channel_id": "222222222222222203",
+      "channel_name": "design",
+      "author": "U05",
+      "timestamp": "2026-07-29T11:30:00+07:00",
+      "content": "Looks good to me, I think we're done with the logo, I guess."
+    },
+    {
+      "message_id": "m011",
+      "channel_id": "222222222222222204",
+      "channel_name": "random",
+      "author": "U05",
+      "timestamp": "2026-07-29T12:00:00+07:00",
+      "content": "lol check this meme"
+    }
+  ]
+}
