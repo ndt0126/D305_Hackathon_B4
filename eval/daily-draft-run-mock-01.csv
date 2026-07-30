@@ -1,0 +1,21 @@
+case_id,run_at,actual_output_or_message_link,result,evaluator,failure_note
+DD-01,2026-07-30T16:30:01+07:00,"/yesterday Hoan thanh API retrieval\n/today Test Discord commands\n/blocked Khong",pass,mock-runner,
+DD-02,2026-07-30T16:30:09+07:00,"/yesterday Doc tai lieu\n/today Build daily bot\n/blocked Dang cho token Discord",pass,mock-runner,
+DD-03,2026-07-30T16:30:16+07:00,"/yesterday Fix bug scheduler\n/today Viet evaluation\n/blocked Khong co blocked",pass,mock-runner,
+DD-04,2026-07-30T16:30:24+07:00,"/yesterday Lam bot\n/today Tiep tuc\n/blocked Khong co blocked",fail,mock-runner,"Bot dien 'Khong co blocked' du input /blocked rong."
+DD-05,2026-07-30T16:30:32+07:00,"/yesterday [Chua cap nhat]\n/today Hoan thien bot\n/blocked Khong",pass,mock-runner,
+DD-06,2026-07-30T16:30:39+07:00,"Ban muon tiep tuc phan nao cua bot?",pass,mock-runner,
+DD-07,2026-07-30T16:30:47+07:00,"/yesterday Hoan thanh API\n/today Viet spec\n/blocked Can TA xac nhan deadline",pass,mock-runner,
+DD-08,2026-07-30T16:30:55+07:00,"/yesterday Hoan thanh evaluation\n/today Hoi\n/blocked Khong",fail,mock-runner,"Bot giu input mo ho thay vi hoi lai 'hoi' la viec gi."
+DD-09,2026-07-30T16:31:03+07:00,"/yesterday Da nop bai (theo cap nhat cua ban)\n/today Test bot\n/blocked Khong",pass,mock-runner,
+DD-10,2026-07-30T16:31:12+07:00,"Minh khong the viet bao cao khong dung su that. Hay cap nhat cong viec that ban da lam.",pass,mock-runner,
+DD-11,2026-07-30T16:31:20+07:00,"Ban muon hoi ai/ve viec gi?",pass,mock-runner,
+DD-12,2026-07-30T16:31:28+07:00,"Da tao ban nhap trong kenh team rieng. Hay copy-paste vao group AI chung.",pass,mock-runner,
+DS-01,2026-07-31T07:00:03+07:00,"#team-daily/message/001",pass,mock-runner,
+DS-02,2026-07-31T07:00:03+07:00,"#team-daily/message/002; blocked token Discord hien thi",pass,mock-runner,
+DS-03,2026-07-31T07:05:06+07:00,"Khong co message thu hai sau restart",pass,mock-runner,
+DS-04,2026-07-31T07:10:04+07:00,"Bot online luc 07:10 nhung khong gui bu va khong co late-start log",fail,mock-runner,"Chua chot/implement catch-up policy."
+DS-05,2026-07-31T07:00:02+07:00,"Discord timestamp 07:00 Asia/Bangkok",pass,mock-runner,
+DS-06,2026-07-31T07:00:04+07:00,"Can xac nhan deadline la 12:00 trua hay 00:00 dem.",pass,mock-runner,
+DS-07,2026-07-31T07:00:05+07:00,"Channel not found; process van chay",pass,mock-runner,
+DS-08,2026-07-31T07:00:06+07:00,"Daily bi cat o 2000 ky tu va mat dong /blocked",fail,mock-runner,"Can rut gon/chia message va giu 3 truong bat buoc."

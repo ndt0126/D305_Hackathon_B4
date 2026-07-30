@@ -1,0 +1,26 @@
+case_id,run_at,actual_output_or_message_link,result,evaluator,failure_note
+QA-01,2026-07-30T16:00:01+07:00,"Han nop Bai tap 01 — Problem framing la 23:59, 02/08/2026 (Asia/Bangkok). Nguon: ANN-014",pass,mock-runner,
+QA-02,2026-07-30T16:00:09+07:00,"Link nop: https://example.edu.vn/submit/assignment-01. Han nop: 23:59, 02/08/2026. Nguon: FAQ-01",pass,mock-runner,
+QA-03,2026-07-30T16:00:17+07:00,"Quiz 02 het han luc 21:00, 04/08/2026 (Asia/Bangkok). Nguon: ANN-018",pass,mock-runner,
+QA-04,2026-07-30T16:00:24+07:00,"Q&A prototype: 19:30, 01/08/2026 tai Workshop Room. Nguon: ANN-021",pass,mock-runner,
+QA-05,2026-07-30T16:00:33+07:00,"Nhom co 4–5 thanh vien; README can co danh sach va phan cong. Nguon: FAQ-03",pass,mock-runner,
+QA-06,2026-07-30T16:00:42+07:00,"Bai tap Problem framing can nop truoc 23:59, 02/08/2026. Nguon: ANN-014",pass,mock-runner,
+QA-07,2026-07-30T16:00:50+07:00,"Minh chua xac dinh duoc assignment ban dang hoi. Vui long viet ro ten bai.",fail,mock-runner,"Retriever chua chiu typo 'assigment'; can them fuzzy matching."
+QA-08,2026-07-30T16:00:59+07:00,"Ban muon hoi han Assignment 01 hay Quiz 02?",pass,mock-runner,
+QA-09,2026-07-30T16:01:08+07:00,"Minh chua tim thay chinh sach nop muon trong nguon chinh thuc. Da tao ticket U-001 cho TA.",pass,mock-runner,
+QA-10,2026-07-30T16:01:17+07:00,"Minh khong thay thong bao chinh thuc xac nhan deadline da doi. Da tao ticket U-002 cho TA.",pass,mock-runner,
+QA-11,2026-07-30T16:01:25+07:00,"Minh khong the lam ho bai nop. Minh co the giup ban lam ro yeu cau bai hoac chuyen TA.",pass,mock-runner,
+QA-12,2026-07-30T16:01:34+07:00,"Minh chua the kiem tra quyen truy cap cua ban. Da tao ticket U-003 cho TA.",pass,mock-runner,
+QA-13,2026-07-30T16:01:42+07:00,"Minh chua co van ban chinh thuc ve pham vi dung data Discord. Da chuyen TA xac nhan.",pass,mock-runner,
+QA-14,2026-07-30T16:01:51+07:00,"Minh chi co the xac nhan deadline 23:59, 02/08/2026 theo ANN-014; khong co thong bao deadline toi nay.",pass,mock-runner,
+QA-15,2026-07-30T16:02:00+07:00,"Ban dang muon xem nguon cua Assignment 01 hay Quiz 02?",pass,mock-runner,
+QA-16,2026-07-30T16:02:09+07:00,"Assignment 01 is due at 23:59, 02/08/2026 (Asia/Bangkok). Source: ANN-014",pass,mock-runner,
+QA-17,2026-07-30T16:02:17+07:00,"Minh chua co nguon chinh thuc cho Assignment 99. Da tao ticket U-004 cho TA.",pass,mock-runner,
+QA-18,2026-07-30T16:02:26+07:00,"https://example.edu.vn/submit/assignment-01 — Nguon: FAQ-01",pass,mock-runner,
+SCH-01,2026-07-31T08:00:03+07:00,"#reminders/message/001 — Daily Schedule da gui luc 08:00 ICT",pass,mock-runner,
+SCH-02,2026-07-31T08:00:03+07:00,"Daily Schedule: Assignment 01 — 23:59 02/08/2026 — submit link — ANN-014; Quiz 02 — 21:00 04/08/2026 — quiz link — ANN-018",pass,mock-runner,
+SCH-03,2026-07-31T08:10:12+07:00,"Bot restart; khong co message Daily Schedule thu hai",pass,mock-runner,
+SCH-04,2026-07-31T08:05:07+07:00,"Bot khoi dong sau 08:00; khong gui bu va khong ghi log late-start",fail,mock-runner,"Chua chot/implement quy tac catch-up va observability khi bot offline."
+SCH-05,2026-07-31T08:00:03+07:00,"Discord timestamp doi chieu: 08:00 Asia/Bangkok",pass,mock-runner,
+SCH-06,2026-07-31T08:00:03+07:00,"Daily Schedule: Hien chua co deadline sap toi trong nguon chinh thuc.",pass,mock-runner,
+SCH-07,2026-07-31T08:00:03+07:00,"Khong gui duoc message vi channel ID khong hop le; process van chay",fail,mock-runner,"Can them structured error log va canh bao cau hinh kenh."
