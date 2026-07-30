@@ -2,12 +2,12 @@
 
 > **Lát cắt MỘT CÂU** *(1 user · 1 việc · 1 quyết định AI · 1 kết quả)*
 >
-> `TODO — chốt tại CP1, phải khớp đúng bản build. Rubric R2: 3 điểm.`
+> **Một học viên**, trước khi nộp `/daily`, cần **soạn ba trường hôm-qua / hôm-nay / blocker**; hệ thống đọc tin nhắn 24h qua của chính người đó và quyết định **mỗi trường có đủ căn cứ hay không**; trả về **bản nháp ba trường, mỗi câu kèm mã tin nhắn nguồn, trường không đủ căn cứ để trống kèm lý do** — người dùng duyệt rồi copy sang `/daily`.
 
-**Hướng:** `TODO — [ ] A · VLearn   [ ] B · Trợ lý Học viên (Discord)   [ ] C · Làn mở`
-**Loại:** `TODO — [ ] Tối ưu tính năng có sẵn   [ ] Tính năng mới`
-**Mức prototype khai báo:** `TODO — [ ] Sketch  [ ] Mock  [ ] Working` *(khai sai mức so với thực tế là mất điểm R5)*
-**Quality bar đã chốt:** `TODO — "Đạt khi ≥ __% qua golden set, VÀ [điều kiện cứng]"` — chốt tại `spec.md` §7, **23:59 N1**, giữ nguyên sau đó.
+**Hướng:** ☑ B · Trợ lý Học viên (Discord)
+**Loại:** ☑ Tính năng mới
+**Mức prototype khai báo:** ☑ Mock — flow bấm được, AI thật ở lõi *(khai sai mức so với thực tế là mất điểm R5)*
+**Quality bar đã chốt:** "Đạt khi **≥80%** case golden set đạt cả 3 chiều, **VÀ 0 case bịa căn cứ**" — chi tiết `spec.md` §7. Chốt từ lúc commit spec, **không đổi** sau đó.
 
 ---
 
@@ -72,6 +72,7 @@ Rubric R7 đòi **README phân công có tên người cho từng phần**. Mỗ
 | `eval/` | Golden set ≥20 case + bảng kết quả các lượt chạy | R4 |
 | `validation/` | Feedback log từ vòng user test ≥5 người | R6 |
 | `reflection/` | Mỗi người 1 file, chấm riêng | *(cá nhân)* |
+| `evidence/` | Log khảo sát n=49 + kế hoạch đo bù | R1 |
 | `artifacts/` | Đề bài · guide · template · rubric · tham khảo — bản gốc từ BTC, giữ để tra | — |
 | `data/` | Data pack VLearn (chatlog + 6 transcript) — **kế thừa từ upstream** | — |
 
