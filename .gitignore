@@ -1,3 +1,15 @@
 .DS_Store
 node_modules/
 *.env
+.env
+.env.*
+
+# Secret cua codebase/ (discord.js) — config.js chua BOT_TOKEN
+codebase/config.js
+config.js
+*.key
+credentials*.json
+
+# Output tam
+out/
+dist/

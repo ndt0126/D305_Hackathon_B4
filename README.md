@@ -1,96 +1,120 @@
-# Mini Hackathon AI — Batch 03
+# D305 · Nhóm B4 — Mini Hackathon AI Batch 03 (Khoá 3)
 
-**SPEC → Prototype → Demo.** Đây không phải cuộc thi code — đây là cuộc thi **tư duy sản phẩm AI**.
+> **Lát cắt MỘT CÂU** *(1 user · 1 việc · 1 quyết định AI · 1 kết quả)*
+>
+> `TODO — chốt tại CP1, phải khớp đúng bản build. Rubric R2: 3 điểm.`
 
-- Thời lượng: **1,5 ngày** (một ngày build + một buổi demo)
-- Nhóm: **4-5 người** · zone tối đa 5 nhóm · thi theo lớp
+**Hướng:** `TODO — [ ] A · VLearn   [ ] B · Trợ lý Học viên (Discord)   [ ] C · Làn mở`
+**Loại:** `TODO — [ ] Tối ưu tính năng có sẵn   [ ] Tính năng mới`
+**Mức prototype khai báo:** `TODO — [ ] Sketch  [ ] Mock  [ ] Working` *(khai sai mức so với thực tế là mất điểm R5)*
+**Quality bar đã chốt:** `TODO — "Đạt khi ≥ __% qua golden set, VÀ [điều kiện cứng]"` — chốt tại `spec.md` §7, **23:59 N1**, giữ nguyên sau đó.
 
-## Bắt đầu từ đâu?
+---
 
-1. Đọc **`01-de-bai.md`** để chọn hướng và hiểu tiêu chí.
-2. Mở **`02-guide.md`** — hướng dẫn từng giai đoạn, đứng ở đâu đọc mục đó.
-3. Viết spec theo **`03-template-ai-spec.md`** — deliverable trung tâm của cả sự kiện.
-4. Đọc **`04-rubric.md`** ngay từ đầu — biết trước bài được chấm theo tiêu chí nào.
+## Thành viên
 
-| File / thư mục | Nội dung |
-|---|---|
-| `01-de-bai.md` | Đề bài 3 hướng · 5 tiêu chí nghiệm thu · ràng buộc chung |
-| `02-guide.md` | Hướng dẫn 5 giai đoạn: khám phá → spec → build → đo & validate → demo |
-| `03-template-ai-spec.md` | Template AI Spec (nộp 23:59 ngày 1) |
-| `04-rubric.md` | Rubric 100 điểm (25 nộp checkpoint + 75 chấm bài) + checklist xác minh 6 mốc |
-| `data/` | Dữ liệu thật đã ẩn danh: chatlog VLearn tutor + 6 transcript bài giảng bản sạch — dùng để tìm bằng chứng và xây golden set |
-| `tham-khao/` | JTBD Playbook (PDF) + worksheet JTBD đầy đủ — đọc khi muốn đào sâu |
+| # | Mã HV | Tên | Vai chính |
+|---|---|---|---|
+| 1 | 2A202601725 | Nguyễn Đức Trung | `TODO` |
+| 2 | 2A202602039 | Nguyễn Tuấn Nam | `TODO` |
+| 3 | 2A202601049 | Nguyễn Quang Vinh | Project manager · spec & báo cáo |
+| 4 | 2A202601913 | Lại Duy Đông | `TODO` |
+| 5 | 2A202601347 | Đinh Quang Minh | `TODO` |
 
-## Lịch — 6 mốc
 
-| Mốc | Khoá 3 | Khoá 4 |
+## Phân công có tên — theo từng artifact được chấm
+
+Rubric R7 đòi **README phân công có tên người cho từng phần**. Mỗi ô là một người chịu trách nhiệm chính, không để trống, không ghi "cả nhóm".
+
+| Artifact | Mục rubric | Điểm | Người chịu trách nhiệm | Trạng thái |
+|---|---|---:|---|---|
+| Evidence — khảo sát ≥20 người / mining có phương pháp đếm | R1 | 6 | `TODO` | ☐ |
+| Pain + bảng impact ≥3 ứng viên + ứng viên đã loại | R1 | 9 | `TODO` | ☐ |
+| `spec.md` §4 — lát cắt · non-goals · automation · ≥4 nguyên tắc HAX/PAIR | R2 | 15 | `TODO` | ☐ |
+| `spec.md` §5-§6 — 4 lớp chỗ khó · ≥8 kịch bản · 4 đường đi trải nghiệm | R3 | 11 | `TODO` | ☐ |
+| `eval/` — golden set ≥20 case + các lượt chạy | R4 | 15 | `TODO` | ☐ |
+| `codebase/` — prototype + ≥1 lời gọi AI thật, có log/trace | R5 | 8 | `TODO` | ☐ |
+| `validation/` — feedback log ≥5 người + changelog | R6 | 8 | `TODO` | ☐ |
+| Cấu trúc repo + README | R7 | 3 | Nguyễn Quang Vinh | ☐ |
+| `demo-slides.pdf` — 6 trang theo guide §5.1 | *(vòng demo)* | — | `TODO` | ☐ |
+
+**Ai nói phần nào ở demo** *(CP6 đòi mỗi thành viên nói ≥1 phần)*:
+
+| Slide | Nội dung | Thời lượng | Người nói |
+|---|---|---|---|
+| 1 | User & Job | 45" | `TODO` |
+| 2 | Vì sao chọn tính năng này | 45" | `TODO` |
+| 3 | Giải pháp & demo live (1 case chuẩn + 1 case chỗ khó) | 2' | `TODO` |
+| 4 | Kết quả đo vs quality bar | 45" | `TODO` |
+| 5 | User thật nói gì | 45" | `TODO` |
+| 6 | Nếu có thêm 1 tuần | 30" | `TODO` |
+
+> **Vibe-coding rule:** dùng AI để build thoải mái, nhưng **không giải thích được phần có tên mình thì phần đó 0 điểm**. Kiểm ngẫu nhiên tại CP5, và giám khảo có thể hỏi lại tại CP6.
+
+## Willing users (≥3 người ngoài nhóm, có tên — khai từ CP1)
+
+| # | Tên / vai | Đã đồng ý thử | Đã test thật (CP5) |
+|---|---|---|---|
+| 1 | `TODO` | ☐ | ☐ |
+| 2 | `TODO` | ☐ | ☐ |
+| 3 | `TODO` | ☐ | ☐ |
+
+---
+
+## Cấu trúc repo
+
+| Đường dẫn | Nội dung | Chấm ở |
 |---|---|---|
-| Khai mạc + phát đề | 09:00 ngày 1 | 14:00 ngày 1 |
-| CP1 · Chốt Canvas | 10:00 ngày 1 | 15:00 ngày 1 |
-| CP2 · Show được thứ bấm được | 12:00 ngày 1 | 17:00 ngày 1 |
-| CP3 · AI chạy thật + đo lượt đầu | 16:00 ngày 1 | 10:30 ngày 2 |
-| CP4 · Chốt tiến độ — spec nộp hạn cứng **23:59 ngày 1** | 17:30 ngày 1 | 12:00 ngày 2 |
-| CP5 · Xác minh + validation + dry run | 09:00 ngày 2 | 14:00 ngày 2 |
-| CP6 · Demo | 10:00 ngày 2 | 15:00 ngày 2 |
+| `README.md` | File này — thành viên + phân công có tên | R7 |
+| `spec.md` | AI Spec §1-§9 theo template. **Hạn cứng 23:59 N1** | R1-R4 (56đ) |
+| `demo-slides.pdf` | Slide 6 trang. *Chưa có — nộp trước CP6* | vòng demo |
+| `codebase/` | Prototype Discord bot (discord.js). Ghi rõ phần nào mock | R5 |
+| `eval/` | Golden set ≥20 case + bảng kết quả các lượt chạy | R4 |
+| `validation/` | Feedback log từ vòng user test ≥5 người | R6 |
+| `reflection/` | Mỗi người 1 file, chấm riêng | *(cá nhân)* |
+| `artifacts/` | Đề bài · guide · template · rubric · tham khảo — bản gốc từ BTC, giữ để tra | — |
+| `data/` | Data pack VLearn (chatlog + 6 transcript) — **kế thừa từ upstream** | — |
 
-Mỗi mốc cần show gì và được xác minh thế nào: xem bảng trong `04-rubric.md`.
+## Trạng thái checkpoint
 
-## Nộp bài
+| Mốc | Giờ (K3) | Cần show | Trạng thái |
+|---|---|---|---|
+| CP1 · Canvas | 10:00 N1 | Canvas 7 dòng | ✅ đã qua |
+| CP2 · Bấm được | 12:00 N1 | Flow chính bấm hết được + commit đầu | ☐ |
+| CP3 · AI thật + đo lượt đầu | 16:00 N1 | ≥1 AI call thật ở quyết định trung tâm + golden set ≥20 + bảng % lượt 1 | ☐ |
+| CP4 · Chốt tiến độ | 17:30 N1 | Spec gần cuối · **spec.md commit hạn cứng 23:59 N1** | ☐ |
+| CP5 · Xác minh + validation + dry run | 09:00 N2 | Feedback log ≥5 có tên · changelog · slide final · dry run bấm giờ | ☐ |
+| CP6 · Demo | 10:00 N2 | 5' trình bày + 5' Q&A · thẻ giám khảo · mỗi người nói ≥1 phần | ☐ |
 
-Một repo nhóm, cấu trúc như sau. Spec chốt lúc 23:59 ngày 1; bản hoàn chỉnh trước CP6.
+**Mỗi checkpoint nộp đúng hạn = 5 điểm, nộp muộn = 0.** Mỗi thành viên nộp riêng, cả nhóm dùng chung link repo này.
 
-```
-repo/
-├── README.md          ← thành viên (mã HV + tên) + phân công có tên từng phần
-├── spec.md            ← AI Spec theo 03-template-ai-spec.md
-├── demo-slides.pdf    ← slide 6 trang theo 02-guide.md §5.1
-├── codebase/          ← prototype (ghi rõ phần nào mock)
-├── eval/              ← golden set + bảng kết quả các lượt chạy
-├── validation/        ← feedback log từ vòng user test
-└── reflection/        ← mỗi người 1 file
-```
+---
 
-## Chấm điểm
+## `codebase/` — phần nào thật, phần nào mock
 
-Tổng **100 điểm = 25 điểm nộp checkpoint + 75 điểm chấm bài nộp**. Chi tiết từng ý điểm: `04-rubric.md`.
+Rubric R5 đòi khai rõ. Cập nhật bảng này trước CP3.
 
-**25 điểm nộp — mỗi checkpoint 5 điểm (CP1-CP5):** nộp đúng hạn → 5 điểm · nộp muộn → 0 điểm cho mốc đó. Mỗi thành viên nộp riêng, cả nhóm dùng chung một link repo.
+| Thành phần | File | Thật / Mock | Ghi chú |
+|---|---|---|---|
+| Nhận lệnh slash `/daily` | `codebase/Handling_discord_cmd_slash.js` | `TODO` | Hiện đang `editReply` trả lại nguyên input — chưa có AI call |
+| Nhận lệnh text prefix `!!` | `codebase/Handling_discord_cmd_texts.js` | `TODO` | Có embed + button edit (`!!demo`, `!!edit_yesterday`) |
+| Extract lịch sử chat | `TODO` | `TODO` | |
+| **Lời gọi AI ở quyết định trung tâm** | `TODO` | **phải THẬT** | Bắt buộc ≥1 call thật, log/trace giữ trong repo |
+| Render report | `TODO` | `TODO` | |
 
-**75 điểm chấm — trên artifact trong repo, mỗi con điểm trỏ về một file:**
+> ⚠️ **Hai việc kỹ thuật cần xử trước CP2** — `codebase/` hiện chưa chạy được:
+> 1. `Handling_discord_cmd_slash.js` import `./config.js`, `./Handling_Schwab_bridge.js`; `Handling_discord_cmd_texts.js` import `./glob.js`, `./T.js` — **cả 4 file đều không có trong repo**. Thiếu `package.json` và entrypoint.
+> 2. `Handling_Schwab_bridge.js` và application ID hardcode `945931546966245426` là **rác từ project khác** — xoá trước khi nộp, người chấm sẽ đọc file này.
 
-| Khối | Điểm | Chấm trên file nào |
-|---|---|---|
-| R1 · Bằng chứng & impact | 15 | `spec.md` §1-§2 + log khảo sát/mining |
-| R2 · Lát cắt & thiết kế | 15 | `spec.md` §4 |
-| R3 · Chỗ khó & kịch bản rủi ro | 11 | `spec.md` §5-§6 |
-| R4 · Kiểm thử | 15 | `spec.md` §7 + `eval/` |
-| R5 · Prototype chạy được | 8 | `codebase/` + demo |
-| R6 · Validation với user | 8 | `validation/` |
-| R7 · Quy trình & repo | 3 | cấu trúc repo |
+## Luật an toàn — soát trước mỗi lần push
 
-Ba điều nên biết trước khi làm:
+- [ ] **Không commit token/API key.** `codebase/config.js` chứa `BOT_TOKEN_A/B/C` → đã đưa vào `.gitignore`. Kiểm tra `git log -p` xem có bị lọt ở commit trước không; đã lọt thì **reset token ở Dev Portal**, đừng chỉ xoá file.
+- [ ] **Data pack:** `data/` kế thừa từ fork upstream. Quy định BTC ghi *"không commit data pack vào repo nộp bài"* → **hỏi TA xem repo fork có được miễn không**, và **giữ repo ở chế độ private** cho tới khi có xác nhận.
+- [ ] Golden set trong `eval/` ghi **mã đoạn / mã hội thoại**, không dán nguyên văn dài.
+- [ ] Không dùng dữ liệu thật của người thật ngoài data pack. Chat Discord dùng để mining lấy số → khi đưa vào `eval/` phải viết lại đã ẩn danh.
+- [ ] Không đưa data lên công cụ free tier có thể dùng dữ liệu để train (guide §3.4).
 
-- Điểm dựa trên **chuỗi quyết định và bằng chứng**, không dựa trên mức độ hoành tráng của sản phẩm.
-- Kết quả đo **ghi nhận trung thực** — kể cả khi không đạt mục tiêu nhóm tự đặt — vẫn được tính đủ điểm. Số liệu bị chỉnh sửa hoặc che giấu sẽ không được tính.
-- Reflection cá nhân chấm riêng theo rubric của khoá. Điểm vòng demo, chấm chéo trong zone và thưởng thêm (nếu có) theo thể lệ công bố lúc khai mạc.
+## Backup demo
 
-## Luật chung
-
-1. Prototype có 3 mức **Sketch / Mock / Working** — mức nào cũng bắt buộc **≥1 lời gọi AI chạy thật**.
-2. **Vibe-coding rule:** dùng AI để build thoải mái, nhưng không giải thích được phần có tên mình thì phần đó 0 điểm (kiểm tra tại CP5).
-3. **Quality bar** chốt tại spec.md 23:59 ngày 1 và giữ nguyên sau đó.
-4. Chỉ dùng dữ liệu trong `data/` hoặc dữ liệu giả tự sinh — không dùng dữ liệu thật của người thật. Không commit API key.
-5. Tuân thủ **quy định bảo mật dữ liệu** bên dưới — đây là điều kiện để được cấp data.
-
-## Bảo mật dữ liệu được cung cấp
-
-Dữ liệu trong `data/` là dữ liệu thật của khoá học (đã ẩn danh), cấp riêng cho hackathon này. Khi nhận data, nhóm cam kết:
-
-1. **Chỉ dùng trong phạm vi hackathon** — cho việc tìm bằng chứng, xây golden set và build prototype. Không dùng cho mục đích khác.
-2. **Không chia sẻ ra ngoài khoá học** — không đăng lên mạng xã hội, không gửi cho người ngoài, không đưa vào bất kỳ dataset hay repo công khai nào.
-3. **Không commit data pack vào repo nộp bài** — repo nhóm chỉ chứa trích dẫn ngắn để minh hoạ (vài dòng); golden set trích từ data ghi rõ mã đoạn/mã hội thoại thay vì dán nguyên văn dài.
-4. **Cẩn trọng khi đưa data vào công cụ ngoài** — chỉ đưa phần tối thiểu cần cho việc đang làm; lưu ý API/công cụ free tier có thể dùng dữ liệu để huấn luyện (xem `02-guide.md` §3.4).
-5. **Không cố suy ngược danh tính** từ dữ liệu đã ẩn danh ([học viên], mã U/C/T/M).
-6. Sau sự kiện, **xoá các bản sao data pack** khỏi máy cá nhân và các công cụ đã upload nếu ban tổ chức yêu cầu.
-
-Vi phạm được xử lý theo quy định của khoá và có thể ảnh hưởng trực tiếp đến điểm của nhóm.
+- [ ] Screenshot / video ngắn của flow chính, phòng live hỏng — chuẩn bị **trước** CP5, không phải lúc lên demo.
+- [ ] Cả nhóm trả lời được 3 câu: *"Augment hay automate — vì sao?"* · *"Failure nguy hiểm nhất?"* · *"Phần bạn làm là gì?"*
