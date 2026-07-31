@@ -275,13 +275,14 @@ Tại thời điểm hoàn thiện CP4, nhóm đã xác định taxonomy, kịch
 
 ## §8. Phân công và kế hoạch
 
-| Thành viên | Mã học viên | Phần phụ trách |
-|---|---|---|
-| Nguyễn Đức Trung | 2A202601725 | Discord tool: export, trigger theo lịch/on-demand, render và UI sửa nháp |
-| Nguyễn Tuấn Nam | 2A202602039 | Slide, demo script, live demo và backup |
-| Nguyễn Quang Vinh | 2A202601049 | Spec, tổng hợp evidence và đảm bảo bám rubric |
-| Lại Duy Đông | 2A202601913 | Golden set, chạy eval và tổng hợp failure |
-| Đinh Quang Minh | 2A202601347 | Brain service: FastAPI, pipeline, prompt, schema và OpenAI integration |
+| Thành viên        | Mã học viên | Phần phụ trách                                                                                                                                                     |
+| ----------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Nguyễn Đức Trung  | 2A202601725 | Discord application layer: thu thập và gửi dữ liệu chat, trigger theo lịch/on-demand, render kết quả, mention thành viên và UI duyệt/sửa nháp                      |
+| Nguyễn Tuấn Nam   | 2A202602039 | Core report engine: pipeline xử lý bundle, tạo standup/summary, định dạng và ẩn dữ liệu nhạy cảm; prompt, mock LLM, schema và dữ liệu mẫu                          |
+| Nguyễn Quang Vinh | 2A202601049 | Product specification và evidence: xác định JTBD, problem statement, impact, scope và nguyên tắc thiết kế; tổng hợp khảo sát, hoàn thiện spec và đối chiếu rubric  |
+| Lại Duy Đông      | 2A202601913 | Evaluation và quality assurance: xây dựng golden set, định nghĩa tiêu chí chất lượng, chạy eval, phân tích failure và kiểm tra các tình huống khó                  |
+| Đinh Quang Minh   | 2A202601347 | API và integration layer: FastAPI routes, xác thực và xử lý lỗi; OpenAI client, Discord Export integration, CLI, logging, cấu hình môi trường và tài liệu tích hợp |
+
 
 ### Willing users và validation
 
