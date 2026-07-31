@@ -2,6 +2,8 @@ import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from "disc
 import { DateTime } from "luxon";
 import glob from "./glob.js";
 import T from "./T.js";
+import fs from "fs/promises";
+
 
 export default class Handling_discord_cmd_texts {
 
@@ -62,6 +64,101 @@ export default class Handling_discord_cmd_texts {
                 await sendDailyEmbed(message, state);
                 break;
             }
+            case 'edit_done': {
+                let state = weeklyStates.get(message.author.id);
+                if (!state) {
+                    state = { done: DEFAULT_DONE, doing: DEFAULT_DOING, blocked: DEFAULT_BLOCKED, questions: DEFAULT_QUESTIONS };
+                }
+                const newText = args.join(' ').trim();
+                if (newText) {
+                    state.done = newText;
+                }
+                weeklyStates.set(message.author.id, state);
+                await sendWeeklyEmbed(message, state);
+                break;
+            }
+            case 'edit_doing': {
+                let state = weeklyStates.get(message.author.id);
+                if (!state) {
+                    state = { done: DEFAULT_DONE, doing: DEFAULT_DOING, blocked: DEFAULT_BLOCKED, questions: DEFAULT_QUESTIONS };
+                }
+                const newText = args.join(' ').trim();
+                if (newText) {
+                    state.doing = newText;
+                }
+                weeklyStates.set(message.author.id, state);
+                await sendWeeklyEmbed(message, state);
+                break;
+            }
+            case 'edit_blocked': {
+                let state = weeklyStates.get(message.author.id);
+                if (!state) {
+                    state = { done: DEFAULT_DONE, doing: DEFAULT_DOING, blocked: DEFAULT_BLOCKED, questions: DEFAULT_QUESTIONS };
+                }
+                const newText = args.join(' ').trim();
+                if (newText) {
+                    state.blocked = newText;
+                }
+                weeklyStates.set(message.author.id, state);
+                await sendWeeklyEmbed(message, state);
+                break;
+            }
+            case 'edit_questions': {
+                let state = weeklyStates.get(message.author.id);
+                if (!state) {
+                    state = { done: DEFAULT_DONE, doing: DEFAULT_DOING, blocked: DEFAULT_BLOCKED, questions: DEFAULT_QUESTIONS };
+                }
+                const newText = args.join(' ').trim();
+                if (newText) {
+                    state.questions = newText;
+                }
+                weeklyStates.set(message.author.id, state);
+                await sendWeeklyEmbed(message, state);
+                break;
+            }
+            case 'demo_scan_this': {
+                try {
+                    await message.reply("Scanning chat history...");
+                    const channel = message.channel;
+                    let allMessages = [];
+                    let lastId = null;
+                    while (true) {
+                        const options = { limit: 100 };
+                        if (lastId) {
+                            options.before = lastId;
+                        }
+                        const messages = await channel.messages.fetch(options);
+                        if (messages.size === 0) {
+                            break;
+                        }
+                        allMessages.push(...messages.values());
+                        lastId = messages.lastKey();
+                        if (messages.size < 100) {
+                            break;
+                        }
+                    }
+                    
+                    const formattedHistory = allMessages.map(msg => ({
+                        id: msg.id,
+                        guild_id: msg.guildId,
+                        channel_id: msg.channelId,
+                        message_id: msg.id,
+                        author: msg.member?.nickname ?? msg.member?.displayName ?? msg.author.displayName ?? msg.author.globalName ?? msg.author.username,
+                        author_discord_id: msg.author.id,
+                        content: msg.content,
+                        attached_file_urls: msg.attachments.map(att => att.url),
+                        timestamp: msg.createdAt
+                    }));
+
+                    await fs.mkdir("./run_data", { recursive: true });
+                    await fs.writeFile("./run_data/chat_history.json", JSON.stringify(formattedHistory, null, 2), "utf8");
+                    await message.reply(`Scan complete! Saved ${formattedHistory.length} messages to disk.`);
+                } catch (error) {
+                    console.error("Error scanning chat history:", error);
+                    await message.reply("Failed to scan chat history.");
+                }
+                break;
+            }
         }
     }
 
@@ -120,13 +217,8 @@ const sendDailyEmbed = async (message, state) => {
         .addFields(
             { name: 'Công việc đã làm hôm qua', value: state.yesterday },
             { name: 'Công việc sẽ làm hôm nay', value: state.today },
-            { name: 'Copy lệnh', value: 'Nếu thấy nội dung này ok, hãy bấm nút copy lệnh daily' }
+            { name: 'Nếu thấy nội dung này ok, hãy copy lệnh dưới đây', value: `\`/daily yesterday:${state.yesterday} today:${state.today}\`` }
         );
-
-    const copyButton = new ButtonBuilder()
-        .setCustomId('copy_daily')
-        .setLabel('Copy Lệnh Daily')
-        .setStyle(ButtonStyle.Primary);
 
     const editYesterdayBtn = new ButtonBuilder()
         .setCustomId('edit_yesterday_btn')
@@ -138,7 +230,7 @@ const sendDailyEmbed = async (message, state) => {
         .setLabel('Edit Today')
         .setStyle(ButtonStyle.Secondary);
 
-    const row = new ActionRowBuilder().addComponents(copyButton, editYesterdayBtn, editTodayBtn);
+    const row = new ActionRowBuilder().addComponents(editYesterdayBtn, editTodayBtn);
 
     const response = await message.reply({
         embeds: [embed],
@@ -148,10 +240,7 @@ const sendDailyEmbed = async (message, state) => {
     const collectorFilter = i => i.user.id === message.author.id;
     try {
         const confirmation = await response.awaitMessageComponent({ filter: collectorFilter, time: 60_000 });
-        if (confirmation.customId === 'copy_daily') {
-            await confirmation.update({ components: [] });
-            await message.channel.send(`/daily yesterday:${state.yesterday} today:${state.today}`);
-        } else if (confirmation.customId === 'edit_yesterday_btn') {
+        if (confirmation.customId === 'edit_yesterday_btn') {
             await confirmation.update({ components: [] });
             await message.channel.send(`!!edit_yesterday ${state.yesterday}`);
         } else if (confirmation.customId === 'edit_today_btn') {
@@ -162,6 +251,76 @@ const sendDailyEmbed = async (message, state) => {
         // ignore timeout
     }
 };
+
+
+const weeklyStates = new Map();
+const DEFAULT_DONE = "done things";
+const DEFAULT_DOING = "things doing";
+const DEFAULT_BLOCKED = "things blocking";
+const DEFAULT_QUESTIONS = "possible questions";
+
+const sendWeeklyEmbed = async (message, state) => {
+    const embed = new EmbedBuilder()
+        .setColor('#ff9900')
+        .setTitle('Báo cáo Weekly')
+        .setDescription('Đã có báo cáo weekly mới, hãy để tôi giúp bạn:')
+        .addFields(
+            { name: 'Done', value: state.done },
+            { name: 'Doing', value: state.doing },
+            { name: 'Blocked', value: state.blocked },
+            { name: 'Questions', value: state.questions },
+            { name: 'Nếu thấy nội dung này ok, hãy copy lệnh dưới đây', value: `\`/weekly submit done:${state.done} doing:${state.doing} blocked:${state.blocked} questions:${state.questions}\`` }
+        );
+
+    const editDoneBtn = new ButtonBuilder()
+        .setCustomId('edit_done_btn')
+        .setLabel('Edit Done')
+        .setStyle(ButtonStyle.Secondary);
+
+    const editDoingBtn = new ButtonBuilder()
+        .setCustomId('edit_doing_btn')
+        .setLabel('Edit Doing')
+        .setStyle(ButtonStyle.Secondary);
+
+    const editBlockedBtn = new ButtonBuilder()
+        .setCustomId('edit_blocked_btn')
+        .setLabel('Edit Blocked')
+        .setStyle(ButtonStyle.Secondary);
+
+    const editQuestionsBtn = new ButtonBuilder()
+        .setCustomId('edit_questions_btn')
+        .setLabel('Edit Questions')
+        .setStyle(ButtonStyle.Secondary);
+
+    const row = new ActionRowBuilder().addComponents(editDoneBtn, editDoingBtn, editBlockedBtn);
+    const row2 = new ActionRowBuilder().addComponents(editQuestionsBtn);
+
+    const response = await message.reply({
+        embeds: [embed],
+        components: [row, row2]
+    });
+
+    const collectorFilter = i => i.user.id === message.author.id;
+    try {
+        const confirmation = await response.awaitMessageComponent({ filter: collectorFilter, time: 60_000 });
+        if (confirmation.customId === 'edit_done_btn') {
+            await confirmation.update({ components: [] });
+            await message.channel.send(`!!edit_done ${state.done}`);
+        } else if (confirmation.customId === 'edit_doing_btn') {
+            await confirmation.update({ components: [] });
+            await message.channel.send(`!!edit_doing ${state.doing}`);
+        } else if (confirmation.customId === 'edit_blocked_btn') {
+            await confirmation.update({ components: [] });
+            await message.channel.send(`!!edit_blocked ${state.blocked}`);
+        } else if (confirmation.customId === 'edit_questions_btn') {
+            await confirmation.update({ components: [] });
+            await message.channel.send(`!!edit_questions ${state.questions}`);
+        }
+    } catch (e) {
+        // ignore timeout
+    }
+};
+
 
 
 
